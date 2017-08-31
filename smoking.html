@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--	Author: Josh Freeman
+		Date:	August 31, 2017
+		File:	smoking.html
+		Purpose:HTML Practice
+-->
+
+
+<html>
+
+<head>
+	<title>Smoking Calculator</title>
+	<link rel ="stylesheet" type="text/css" href="sample.css">
+</head>
+<body>
+
+	<h1>Welcome to the Smoking Calculator!</h1>
+
+	<form action = "smoking.php" method = "post" >
+
+		<p>What is your first name?
+		<input type = "text" size = "20" name = "firstName">
+		</p>
+
+		<p>What is your last name?
+		<input type = "text" size = "20" name = "lastName">
+		</p>
+
+		<p>For how many years have you smoked?
+		<input type = "text" size = "5" name = "yearsSmoked">
+		</p>
+
+		<p>How many cigarettes have you <br> smoked on average every day (roughly)?
+		<select name = "smokedDaily" >
+		<option>0</option>
+		<option>1</option>
+		<option>2</option>
+		<option>5</option>
+		<option>10</option>
+		<option>20</option>
+		<option>30</option>
+		<option>40</option>
+		</select>
+		</p>
+
+		<p>
+		<input type = "submit" value = "Tell me the bad news">
+		<input type = "reset"  value = "I want to try again">
+		</p>
+
+	</form>
+</body>
+</html>
