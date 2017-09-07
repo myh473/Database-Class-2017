@@ -57,14 +57,47 @@
 			$number = (1/6 * pi() * $number);
 			$volArray[$i] = $number;
 		}
-				for ($i = 0; $i < $arraySize; $i++) {		//FOR TESTING
-			print("<p> Num $i = $numArray[$i]<br></p>");
-			echo "SquareRoot is " . number_format($sqrtArray[$i],3)."<br>";
-			echo "squared is " . number_format($squareArray[$i],3)."<br>";
-			print("<p> String is $i = $stringArray[$i]<br></p>");
-			echo "Area is " .number_format($areaArray[$i],3)."<br>";
-			echo "Volume is " . number_format($volArray[$i],3)."<br>";
+			for ($i = 0; $i < $arraySize; $i++) {
+			$tmpNum=rand(0,5);
+			$number = pow ($numArray[$i] , $tmpNum);
+			$randUpArray[$i] = $number;
 		}
+		
+
+		print("<table border = \"2\"> <tr>
+			<th>X</th>
+			<th>Sq. Rt x</th>
+			<th>x^2</th>
+			<th>X^rand(0,5)</th>
+			<th>Pos/Neg/Zero</th>
+			<th>Area of X radius circle </th>
+			<th>volume of sphere X diameter</th>
+		</tr>");
+		
+		
+
+		
+		
+			for ($j = 0; $j < $arraySize; $j++) {
+			$a = number_format($sqrtArray[$j],3);
+			$b = number_format($squareArray[$j],3);
+			$c = number_format($randUpArray[$j],3);
+			$d = number_format($areaArray[$j],3);
+			$e = number_format($volArray[$j],3);
+			
+			
+			
+			print("<tr>	<td>$numArray[$j]</td>
+			<td class =\"center\">$a</td>
+			<td class =\"center\">$b</td>
+			<td class =\"center\">$c</td>
+			<td class =\"center\">$stringArray[$j]</td>
+			<td class =\"center\">$d</td>
+			<td class =\"center\">$e</td>
+		</tr>");
+		}
+		
+		print("</table>");
 }
 		else{
 	print("<h1>What ya doin there?</h1>");
