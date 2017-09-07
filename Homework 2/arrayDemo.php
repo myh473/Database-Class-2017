@@ -42,8 +42,32 @@
 		}
 
 		for ($i = 0; $i < $arraySize; $i++) {
-			$number = pow (squareArray[$i] , 2)
+			$number = $numArray[$i];
+			$number = pow ($number , 2);
 			$squareArray[$i] = $number;
+		}
+
+
+
+		for ($i = 0; $i < $arraySize; $i++) {
+			if ($numArray[$i] >= 0) {
+				$stringArray[$i] = "Positive";
+			}
+			else {
+				$stringArray[$i] = "Negative";
+			}
+		}
+
+
+
+
+		for ($i = 0; $i < $arraySize; $i++) {
+
+			$number = abs ($numArray[$i]);
+			$number = pow ($number , 3);
+			$number = (1/6 * pi() * $number);
+			$volArray[$i] = $number;
+
 		}
 
 
@@ -54,6 +78,8 @@
 			print("<p> Num $i = $numArray[$i]<br></p>");
 			echo "SquareRoot is " . number_format($sqrtArray[$i],3)."<br>";
 			echo "squared is " . number_format($squareArray[$i],3)."<br>";
+			print("<p> String is $i = $stringArray[$i]<br></p>");
+			echo "Volume is " . number_format($volArray[$i],3)."<br>";
 
 		}
 
