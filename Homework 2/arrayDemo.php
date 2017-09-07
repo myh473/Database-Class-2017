@@ -50,11 +50,14 @@
 
 
 		for ($i = 0; $i < $arraySize; $i++) {
-			if ($numArray[$i] >= 0) {
+			if ($numArray[$i] > 0) {
 				$stringArray[$i] = "Positive";
 			}
-			else {
+			else if ($numArray[$i] < 0) {
 				$stringArray[$i] = "Negative";
+			}
+			else {
+				$stringArray[$i] = "Zero";
 			}
 		}
 
@@ -78,7 +81,7 @@
 			print("<p> Num $i = $numArray[$i]<br></p>");
 			echo "SquareRoot is " . number_format($sqrtArray[$i],3)."<br>";
 			echo "squared is " . number_format($squareArray[$i],3)."<br>";
-			print("<p> String is $i = $stringArray[$i]<br></p>");
+			print("<p> String is = $stringArray[$i]<br></p>");
 			echo "Volume is " . number_format($volArray[$i],3)."<br>";
 
 		}
