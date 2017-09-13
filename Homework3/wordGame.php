@@ -9,12 +9,14 @@
 	<h1>Here are your random letter pal</h1>
 
 	<?php 
+		session_start();
 		$letterAmount = $_POST['letterAmount'];
 		$randomLetters = array();
 	for($i = 0; $i < $letterAmount; $i++) {
 		$randomLetters[$i] = chr(rand(97,122));
 		print ("<tr> <td> $randomLetters[$i] </td> </tr>");
 	}
+	$_SESSION["letters"] = $randomLetters;
 	?>
 	<h2></h2>
 	<form action = "substrings.php" method = "post" >
