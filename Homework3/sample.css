@@ -7,7 +7,7 @@ h2 	{	font-family: Arial, Helvetica, Sans-serif; font-size:14pt;
 	 		color:purple; font-weight:bold; }
 
 p	{	font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
-	 	color:fuchsia; }
+	 	color:black; }
 
 p.alert	{ 	font-style: italic; color:red;}
 
@@ -17,7 +17,7 @@ table	{ 	font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
 td.center{	text-align:center;}
 
 select	{ 	font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
-	 			font-weight: bold; color:fuchsia; background: gray}
+	 			font-weight: bold; color:black; background: pink}
 
 option	{ 	font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
 	 			color:black; background: silver}
