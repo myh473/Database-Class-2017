@@ -9,12 +9,12 @@
 	<h1>All Posible Substrings</h1>
 
 	<?php 
-		$randomLetters = $_POST['randomLetters'];
+		$randomLetters = $_SESSION["letters"];
 		
 		$tmpString="";
-		feof($randomLetter)
+		feof($randomLetters)
 		{
-			$tmpString.=$randomLetter;
+			$tmpString.=$randomLetters;
 		}
 		
 		for($i=((randomLetters.count)-1); $i>0; $i--)
