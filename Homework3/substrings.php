@@ -12,14 +12,18 @@
 		$randomLetters = $_SESSION["letters"];
 		
 		$tmpString="";
-		feof($randomLetters)
+		$count=0;
+		
+		print($randomLetters.count);
+		
+		feof( $k=0; $k<$randomLetters.count; $k++)
 		{
-			$tmpString.=$randomLetters;
+			print("<tr> <td> substr($randomLetters[$k]) </td> </tr>");
 		}
 		
-		for($i=((randomLetters.count)-1); $i>0; $i--)
+		for($i=(($randomLetters.count)-1); $i>0; $i--)
 		{
-			for($j=0;j<((randomLetter.count-1)-$i);$j++)
+			for($j=0;j<(($randomLetters.count-1)-$i);$j++)
 			{
 			print ("<tr> <td> substr($tmpString, $j, $i )(  </td> </tr>");
 			}
