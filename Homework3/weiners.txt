@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+
+/**
+ * This class generates substrings of a string.
+ */
+public class SubstringGenerator {
+	public static ArrayList<String> getSubstrings(String word) {
+		ArrayList<String> result = new ArrayList<String>();
+		if (word.length() == 0) {
+			result.add(word);
+			return result;
+		}
+		
+		//recursive case here
+
+		// Form a simpler word by removing the first character
+		String shorterWord = word.substring(1);
+
+		// Generate all substrings of the simpler word
+		//ArrayList<String> shorterWordSubstrings = getSubstrings(shorterWord);
+		result = getSubstrings(shorterWord);
+
+		//result now holds all substrings with first letter removed from word
+		
+		// Add the removed character to the front of
+		// each subset of the simpler word, and
+		// also include the word without the removed character
+		
+		
+//		for (String s : shorterWordSubstrings) {
+//			result.add(s);
+//		}
+
+		// this loop processes the word itself here, adding
+		// all its substrings to the result that start with
+		// word.charAt(0)
+		// Add all strings that start with word.charAt(0)
+		for (int i = 1; i <= word.length(); i++) {
+			result.add(word.substring(0, i));
+		}
+
+		
+		// Return all substrings
+		return result;
+	}
+}
