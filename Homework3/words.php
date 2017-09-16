@@ -22,27 +22,26 @@
 
 		//$permutationsSorted = array_unique($permutations);
 		
-		print("<pre>");
+		print("<pre>Unsorted Permutations <br>");
 		print_r($permutations);
 		print("</pre>");
-		print("<pre>");
+		print("<pre>Sorted Permutations<br>");
 		print_r($permutationsSorted);
 		print("</pre>");
 
 
 
-		for($i = 0; $i < sizeof($permutationsSorted); $i++) {
-
 			for($j = 0; $j < sizeof($lines); $j++) {
 
-				if($permutationsSorted[$i] == $lines[$j]) {
-					//array_push($words, $permutations[$i]);
-					$words[] = $permutationsSorted[$i];
+
+				if(isset($permutationsSorted[$lines[$j]])) {
+					$words[] = $lines[$j];
 				}
 			}
-		}
 		
-		print("</pre>");
+
+
+		print("<pre>All Real Words from Permutations<br>");
 		print_r($words);
 		print("</pre>");
 

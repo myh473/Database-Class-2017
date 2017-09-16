@@ -1,0 +1,33 @@
+You will need to use the session array for this assignment after all.  Your first php page will have some logic that looks something like this (this is the page that prints the random letters, saves them to a file, and lists 3 buttons to print the substrings, permutations, and words).
+
+
+
+<?php
+	session_start();
+?>
+
+*** the lines above must be the VERY FIRST THING IN YOUR FILE!!!
+** put them at the start of every html file!!!
+
+**now put in some html 
+
+** now your php code:
+
+<?php
+
+	if(!isset($_SESSION['numLetters'])) {
+	
+		In here you put code to do the following
+		$_SESSION['numLetters'] = $_POST['numLetters']; //makes sure we hit ELSE next time this page loads
+		
+		***Generate letters
+		***write letters to file (and session array if you want to ... your choice)
+		***Print letters to screen
+
+	} else {  //we've already visited this page, don't need to generate letters / write file again!
+		***read letters from file (or from session array if you choose to use it for this also)
+		***Print letters to screen
+	}
+	
+	PRINT 3 MENU BUTTONS *** Do this always ... does not go inside if/else above
+	
