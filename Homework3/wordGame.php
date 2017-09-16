@@ -40,5 +40,8 @@
 	</form>
 	<form action = "words.php" method = "post" >
 	<input type = "submit" value = "Possible Words">
+	</form>
+	<form action = "logout.php" method = "post" >
+	<input type = "submit" value = "Start Over">
 	</body>
 	</html>
