@@ -10,17 +10,31 @@
 
     <?php
     session_start();
-    $Permutations = array(array());
+	permDriver();
+
+function permDriverReturn(){
+	 $Permutations = array(array());
     $randomLetters = $_SESSION['randomLetters'];
 
     $Permutations = AllPermutations($randomLetters);
     $_SESSION['Permutations'] = array_2d_to_1d($Permutations);
+	
+	return array_2d_to_1d($Permutations);
+}	
 
+function permDriver(){
+	 $Permutations = array(array());
+    $randomLetters = $_SESSION['randomLetters'];
+
+    $Permutations = AllPermutations($randomLetters);
+    $_SESSION['Permutations'] = array_2d_to_1d($Permutations);
+}
 
 function AllPermutations($items, $perms = array( )) {
+	//base case
     if (empty($items)) {
         $return = array($perms);
-    }  else {
+    }  else { 
         $return = array();
         for ($i = count($items) - 1; $i >= 0; --$i) {
              $newitems = $items;
@@ -54,5 +68,12 @@ function array_2d_to_1d ($input_array) {
     <form action = "words.php" method = "post" >
     <input type = "submit" value = "Possible Words">
     </form>
+	<form action = "wordGame.php" method = "post" >
+	<input type = "submit" value = "Back">
+	</form>
+	<form action = "logout.php" method = "post" >
+	<input type = "submit" value = "Start Over">
+	</form>
+	</body>
 </body>
 </html>

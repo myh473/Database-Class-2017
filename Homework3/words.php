@@ -40,15 +40,23 @@
 		print("<pre>All Real Words from Permutations<br>");
 		print_r($words);
 		print("</pre>");
+		
+		 $_SESSION['words']=$words;
 
 		//fclose($substrings);
 		//fclose($permutations);
 	$_SESSION["letters"]
 	?>
+	
+	
+	
 
 	<form action = "wordGame.php" method = "post" >
 	<input type = "submit" value = "Back">
 	</form>
+	<form action = "logout.php" method = "post" >
+	<input type = "submit" value = "Start Over">
+	</body>
 
 	</body>
 	</html>

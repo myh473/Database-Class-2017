@@ -9,27 +9,44 @@
 	<h1>All Posible Substrings</h1>
 
 	<?php 
-		$randomLetters = $_POST['randomLetters[1]'];
+		 session_start();
+		 
+		 $randomLetters = $_SESSION['randomLetters'];
+		 
+		 $toString = implode($randomLetters);
+		 
+		
 		
 		$tmpString="";
-		$count=0;
 		
-		print(" <p> sizeof($randomLetters) </p>");
-		/*
-		feof( $k=0; $k<$randomLetters.count(); $k++)
-		{
-			print("<p> substr($randomLetters[$k])  </p>");
-		}
 		
-		for($i=(($randomLetters.count())-1); $i>0; $i--)
-		{
-			for($j=0;j<(($randomLetters.count()-1)-$i);$j++)
-			{
-			print ("<tr> <td> substr($tmpString, $j, $i )(  </td> </tr>");
+		
+		
+
+		for($span=sizeof($randomLetters); $span>0; $span--) {
+			
+			
+			for($j=0; $j<(sizeof($randomLetters)-$span); $j++){
+				
+				$newSub = substr($toString, $j, $span);
+				
+				echo " Size $span: $newSub <br>";
+			
 			}
+			
 		}
-		*/
+		
+		
+		
+
+
 		
 	?>
+	<form action = "wordGame.php" method = "post" >
+	<input type = "submit" value = "Back">
+	</form>
+	<form action = "logout.php" method = "post" >
+	<input type = "submit" value = "Start Over">
+	</body>
 	</body>
 	</html>

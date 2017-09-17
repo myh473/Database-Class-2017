@@ -30,6 +30,21 @@
 			print("</pre>");
 		}
 	?>
+	
+	<form action = "score.php" method = "post" >
+
+		<p>Enter responses, separated with spaces.
+		<input type = "text" size = "20" name = "answers">
+		</p>
+
+
+		<p>
+		<input type = "submit" value = "Tell me the bad news">
+		</p>
+
+	</form>
+	
+	
 	<h2></h2>
 	<form action = "substrings.php" method = "post" >
 	<input type = "submit" value = "Substrings">
