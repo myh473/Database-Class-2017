@@ -9,26 +9,27 @@
 	<h1>All Posible Substrings</h1>
 
 	<?php 
-		$randomLetters = $_SESSION["letters"];
+		$randomLetters = $_POST['randomLetters[1]'];
 		
 		$tmpString="";
 		$count=0;
 		
-		print($randomLetters.count);
-		
-		feof( $k=0; $k<$randomLetters.count; $k++)
+		print(" <p> sizeof($randomLetters) </p>");
+		/*
+		feof( $k=0; $k<$randomLetters.count(); $k++)
 		{
-			print("<tr> <td> substr($randomLetters[$k]) </td> </tr>");
+			print("<p> substr($randomLetters[$k])  </p>");
 		}
 		
-		for($i=(($randomLetters.count)-1); $i>0; $i--)
+		for($i=(($randomLetters.count())-1); $i>0; $i--)
 		{
-			for($j=0;j<(($randomLetters.count-1)-$i);$j++)
+			for($j=0;j<(($randomLetters.count()-1)-$i);$j++)
 			{
 			print ("<tr> <td> substr($tmpString, $j, $i )(  </td> </tr>");
 			}
 		}
-	
+		*/
+		
 	?>
 	</body>
 	</html>
