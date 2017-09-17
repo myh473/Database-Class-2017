@@ -18,7 +18,6 @@
 			$_SESSION["letters"] = $randomLetters;
 			for($i = 0; $i < $_SESSION['letterAmount']; $i++) {
 			$randomLetters[$i] = chr(rand(97,122));
-			print ("<tr> <td> $randomLetters[$i] </td> </tr>");
 			}
 			$_SESSION['randomLetters'] = $randomLetters;
 			print("<pre>In the IF");

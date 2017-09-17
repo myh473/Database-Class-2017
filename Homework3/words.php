@@ -14,7 +14,8 @@
 		//$substrings = fopen("substrings.txt", "r");
 		//$permutations = fopen("permutations.txt", "r");
 		$lines = file("engmix.txt", FILE_IGNORE_NEW_LINES);
-		$permutations = file("permutations.txt", FILE_IGNORE_NEW_LINES);
+		//$permutations = file("permutations.txt", FILE_IGNORE_NEW_LINES);
+		$permutations = $_SESSION['Permutations'];
 		for($i = 0; $i<sizeof($permutations); $i++) {
 			$permutationsSorted[$permutations[$i]] = $permutations[$i];
 		}
@@ -22,9 +23,9 @@
 
 		//$permutationsSorted = array_unique($permutations);
 		
-		print("<pre>Unsorted Permutations <br>");
-		print_r($permutations);
-		print("</pre>");
+		//print("<pre>Unsorted Permutations <br>");
+		//print_r($permutations);
+		//print("</pre>");
 		print("<pre>Sorted Permutations<br>");
 		print_r($permutationsSorted);
 		print("</pre>");
