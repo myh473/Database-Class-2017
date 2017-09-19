@@ -15,8 +15,19 @@
 		$_SESSION['answers']=$_POST['answers'];//Wrong?
 		
 		print_r($_POST['answers']);
+
+
+		if(!isset($_SESSION['answers']) || $_SESSION['answers'] == '') {
+
+			
+			print("<pre>Remember to enter words!?");
+			
+			print("</pre>");
+		}
+
+		else {
 		
-		if(isset($_SESSION['answers'])) {
+		if(!isset($_SESSION['words'])) {
 
 			
 			print("<pre>Are you cheating?");
@@ -31,6 +42,7 @@
 			print_r($_SESSION['randomLetters']);
 			print("</pre>");
 		}
+	}
 		
 		function checkScore ($responses){
 			$checkerArray = $_SESSION['words']; //Wrong?
@@ -44,11 +56,11 @@
 			foreach($responseArray as $r){
 				
 				if (in_array($r, $checkerArray)) {
-				$score.=1;
+				$score++;
 }
 			}
 			
-			print("you got $score out of $total possible words!");
+			print("<br>you got $score out of $total possible words!");
 			
 			
 			

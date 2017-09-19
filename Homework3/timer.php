@@ -3,7 +3,8 @@
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2018 15:37:25").getTime();
+var countDownDate = new Date().getTime()+( 0 * 0 * 5 * 0);
+;
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -21,8 +22,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
 
   // If the count down is finished, write some text 
   if (distance < 0) {

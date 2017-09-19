@@ -18,33 +18,20 @@
 		$permutations = $_SESSION['Permutations'];
 		//for($i = 0; $i<sizeof($permutations); $i++) {
 	//	foreach($m as $item) {
-		//	foreach($item as $key +> $value) {
-		foreach($permutations as $i) {
-				$permutationsSorted[$permutations[$i]] = $permutations[$i];
-			}
+		//	foreach($item as $key +> $value) 
 		
 		
 //USE FOR EACH LOOPS
 
-		//$permutationsSorted = array_unique($permutations);
 		
-		//print("<pre>Unsorted Permutations <br>");
-		//print_r($permutations);
-		//print("</pre>");
 		print("<pre>Sorted Permutations<br>");
-		print_r($permutationsSorted);
+		print_r($permutations);
 		print("</pre>");
 
 			for($j = 0; $j < sizeof($lines); $j++) {
-
-			//	if(isset($permutationsSorted[$lines[$j]])) {
-				foreach($permutations as $i) {
-					$permCheck = $permutations[$i];
-					//print("test");
-					if(isset($permutationsSorted[$lines[$j]])) {
-					$words[] = $lines[$j];
+					if(isset($permutations[$lines[$j]])) {
+						$words[] = $lines[$j];
 					}
-				}
 			}
 		
 		print("<pre>All Real Words from Permutations<br>");
