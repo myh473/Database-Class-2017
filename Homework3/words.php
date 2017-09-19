@@ -16,9 +16,14 @@
 		$lines = file("engmix.txt", FILE_IGNORE_NEW_LINES);
 		//$permutations = file("permutations.txt", FILE_IGNORE_NEW_LINES);
 		$permutations = $_SESSION['Permutations'];
-		for($i = 0; $i<sizeof($permutations); $i++) {
-			$permutationsSorted[$permutations[$i]] = $permutations[$i];
-		}
+		//for($i = 0; $i<sizeof($permutations); $i++) {
+	//	foreach($m as $item) {
+		//	foreach($item as $key +> $value) {
+		foreach($permutations as $i) {
+				$permutationsSorted[$permutations[$i]] = $permutations[$i];
+			}
+		
+		
 //USE FOR EACH LOOPS
 
 		//$permutationsSorted = array_unique($permutations);
@@ -32,8 +37,13 @@
 
 			for($j = 0; $j < sizeof($lines); $j++) {
 
-				if(isset($permutationsSorted[$lines[$j]])) {
+			//	if(isset($permutationsSorted[$lines[$j]])) {
+				foreach($permutations as $i) {
+					$permCheck = $permutations[$i];
+					//print("test");
+					if(isset($permutationsSorted[$lines[$j]])) {
 					$words[] = $lines[$j];
+					}
 				}
 			}
 		

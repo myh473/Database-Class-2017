@@ -54,12 +54,15 @@ function array_2d_to_1d ($input_array) {
     for ($i = 0; $i < sizeof($input_array); $i++) {
       for ($j = 0; $j < sizeof($input_array[$i]); $j++) {
         $pushString .= $input_array[$i][$j];
-        print("push string = $pushString<br>");
-        $output_array[] = $pushString;
+        $tranArray[] = $pushString;
+        $output_array[$tranArray[$i]] = $tranArray[$i];
       }
-     // $output_array[] = $pushString;
       $pushString = null;
     }
+
+    print("<pre>Sorted Permutations<br>");
+    print_r($output_array);
+    print("</pre>");
 
     return $output_array;
 }
