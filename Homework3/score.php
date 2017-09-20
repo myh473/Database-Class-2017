@@ -20,7 +20,7 @@
 		if(!isset($_SESSION['answers']) || $_SESSION['answers'] == '') {
 
 			
-			print("<pre>Remember to enter words!?");
+			print("<pre>Remember to enter words!");
 			
 			print("</pre>");
 		}
@@ -68,6 +68,9 @@
 		}
 	?>
 	<h2></h2>
+	<form action = "wordGame.php" method = "post" >
+	<input type = "submit" value = "Back">
+	</form>
 	<form action = "substrings.php" method = "post" >
 	<input type = "submit" value = "Substrings">
 	</form>

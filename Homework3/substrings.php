@@ -10,6 +10,8 @@
 
 	<?php 
 		 session_start();
+
+		 $substrings = fopen("substrings.txt", "w");
 		 
 		 $randomLetters = $_SESSION['randomLetters'];
 		 
@@ -31,6 +33,7 @@
 				$newSub = substr($toString, $j, $span);
 				
 				echo " Size $span: $newSub <br>";
+				fwrite($substrings, $newSub);
 			
 			}
 			
@@ -39,7 +42,7 @@
 		
 		
 
-
+		fclose($substrings);
 		
 	?>
 	<form action = "wordGame.php" method = "post" >

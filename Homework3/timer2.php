@@ -10,7 +10,11 @@
 
 <?php 
 
-    $timer =  time() +( 0 * 0 * 5 * 0);
+
+   $timeNow = time();
+   $timeThen =  time() +( 0 * 0 * 5 * 0);
+
+   
 
    print("<pre>All Real Words from Permutations<br>");
       print_r($timer);

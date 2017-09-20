@@ -10,17 +10,8 @@
 
     <?php
     session_start();
-	permDriver();
-
-function permDriverReturn(){
-	 $Permutations = array(array());
-    $randomLetters = $_SESSION['randomLetters'];
-
-    $Permutations = AllPermutations($randomLetters);
-    $_SESSION['Permutations'] = array_2d_to_1d($Permutations);
-	
-	return array_2d_to_1d($Permutations);
-}	
+    $permutations = fopen("permutations.txt", "w");
+    permDriver();
 
 function permDriver(){
 	 $Permutations = array(array());
@@ -28,6 +19,13 @@ function permDriver(){
 
     $Permutations = AllPermutations($randomLetters);
     $_SESSION['Permutations'] = array_2d_to_1d($Permutations);
+    $output_array = $_SESSION['Permutations'];
+
+   foreach($output_array as $key => $value) {
+         //  string  $tranVar = "";
+         //  $tranVar = $output_array[$key];
+         //  fwrite($permutations, $tranVar);
+          }
 }
 
 function AllPermutations($items, $perms = array( )) {
@@ -66,6 +64,8 @@ function array_2d_to_1d ($input_array) {
 
     return $output_array;
 }
+
+    fclose($permutations);
 
     ?>
     <form action = "words.php" method = "post" >
