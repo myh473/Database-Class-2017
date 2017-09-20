@@ -1,10 +1,10 @@
-body 	{ background: pink }
+body 	{ background: #dfbf9f; }
 
 h1 	{	font-family: Arial, Helvetica, Sans-serif; font-size:18pt;
-	 		color:teal; font-weight:bold; }
+	 		color:#404040; font-weight:bold; }
 
 h2 	{	font-family: Arial, Helvetica, Sans-serif; font-size:14pt;
-	 		color:purple; font-weight:bold; }
+	 		color:#404040; font-weight:bold; }
 
 p	{	font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
 	 	color:black; }
