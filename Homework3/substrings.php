@@ -34,6 +34,7 @@
 				
 				echo " Size $span: $newSub <br>";
 				fwrite($substrings, $newSub);
+				fwrite($substrings, "\n");
 			
 			}
 			

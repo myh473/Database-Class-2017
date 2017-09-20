@@ -17,10 +17,10 @@
 			for($j = 0; $j < sizeof($lines); $j++) {
 					if(isset($permutations[$lines[$j]])) {
 						$words[] = $lines[$j];
+						fwrite($wordsFile, $lines[$j]);
+						fwrite($wordsFile, "\n");
 					}
 			}
-
-		$words = array();
 
 		if(empty($words)) {
 			print("There are no valid words in this set of letters.");

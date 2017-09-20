@@ -10,11 +10,11 @@
 
     <?php
     session_start();
-    $permutations = fopen("permutations.txt", "w");
     permDriver();
 
 function permDriver(){
 	 $Permutations = array(array());
+    $permutationsFile = fopen("permutations.txt", "w");
     $randomLetters = $_SESSION['randomLetters'];
 
     $Permutations = AllPermutations($randomLetters);
@@ -22,10 +22,11 @@ function permDriver(){
     $output_array = $_SESSION['Permutations'];
 
    foreach($output_array as $key => $value) {
-         //  string  $tranVar = "";
-         //  $tranVar = $output_array[$key];
-         //  fwrite($permutations, $tranVar);
-          }
+           $tranVar = $output_array[$key];
+           fwrite($permutationsFile, $tranVar);
+           fwrite($permutationsFile, "\n");
+          } 
+         fclose($permutationsFile);
 }
 
 function AllPermutations($items, $perms = array( )) {
@@ -64,8 +65,6 @@ function array_2d_to_1d ($input_array) {
 
     return $output_array;
 }
-
-    fclose($permutations);
 
     ?>
     <form action = "words.php" method = "post" >
