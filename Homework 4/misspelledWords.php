@@ -53,8 +53,6 @@
 						}//for
 						if($count == 0) {
 						$wordsBad[] = $randomWords[$value];
-						fwrite($fakeWords, $randomWords[$value]);
-						fwrite($fakeWords, "\n");
 						}
 					}//foreach
 
@@ -62,7 +60,12 @@
 			print_r($wordsBad);
 			print("</pre>");
 
-			asort($wordsBad);
+			sort($wordsBad);
+
+			for($i = 0; $i < sizeof($wordsBad); $i++) {
+			fwrite($fakeWords, $wordsBad[$i]);
+			fwrite($fakeWords, "\n");
+			}
 
 			print("<pre>Here are things that are not words -Sorted");
 			print_r($wordsBad);
@@ -92,6 +95,5 @@
 	</form>	
 	<form action = "logout.php" method = "post" >
 	<input type = "submit" value = "Start Over">
-</body>
 </body>
 </html>

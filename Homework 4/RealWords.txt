@@ -1,8 +1,6 @@
-bled
-cwt
-dim
-few
-neg
-paz
-pry
-rex
+btu
+cup
+dar
+day
+eat
+fief
