@@ -23,18 +23,16 @@
 
 		for($j = 0; $j < $letterCount; $j++) {
 			$randomLetters .= chr(rand(97,122));
-			}
-			$randomWords[$randomLetters] = $randomLetters;
-			$randomLetters = '';
+		}
+		$randomWords[$randomLetters] = $randomLetters;
+		$randomLetters = '';
 	}
-
 
 			print("<pre>Nice 'words' ");
 			print_r($randomWords);
 			print("</pre>");
 
-
-	for($j = 0; $j < sizeof($lines); $j++) { //taken from HW 3
+	for($j = 0; $j < sizeof($lines); $j++) {
 					if(isset($randomWords[$lines[$j]])) {
 						$wordsGood[] = $lines[$j];
 						fwrite($realWords, $lines[$j]);
@@ -49,7 +47,6 @@
 					foreach($randomWords as $value) {
 						$count = 0;
 						for($i = 0; $i < sizeof($wordsGood); $i++) {
-						//	print("$i is i $value is value<br>");
 							if($randomWords[$value] == $wordsGood[$i]) {
 								$count = 1;
 							}//if
@@ -71,11 +68,30 @@
 			print_r($wordsBad);
 			print("</pre>");
 
-
 			fclose($realWords);
 			fclose($fakeWords);
-
 	?>
-
-	</body>
-	</html>
+	
+	<form action = "start.html" method = "post" >
+    <input type = "submit" value = "Back to the start">
+    </form>
+	<form action = "analysis.php" method = "post" >
+	<input type = "submit" value = "Analysis">
+	</form>
+	<form action = "misspelledWords.php" method = "post" >
+	<input type = "submit" value = "Let's misspell some words">
+	</form>
+	<form action = "frequency.php" method = "post" >
+	<input type = "submit" value = "Frequency">
+	</form>	
+	<form action = "homophones.php" method = "post" >
+	<input type = "submit" value = "Homophones">
+	</form>	
+	<form action = "levenshtein.php" method = "post" >
+	<input type = "submit" value = "Levenshtein">
+	</form>	
+	<form action = "logout.php" method = "post" >
+	<input type = "submit" value = "Start Over">
+</body>
+</body>
+</html>
