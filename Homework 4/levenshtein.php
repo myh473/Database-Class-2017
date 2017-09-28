@@ -37,21 +37,15 @@
 		}
 
 
-		print("<pre>All Real Words from Permutations<br>");
-		print_r($fakeWords);
-		print("</pre>");
 
-		print("<pre>All Real Words from Permutations<br>");
-		print_r($sortedArray);
-		print("</pre>");
-
-		print("<pre>All Real Words from Permutations<br>");
+		print("<pre>Here is the closest levenshtein word to each 'word' <br>");
 		print_r($holdArray);
 		print("</pre>");
 
-		print("<pre>All Real Words from Permutations<br>");
+		print("<pre>Here is the levenshtein value of each 'word' <br>");
 		print_r($compArray);
 		print("</pre>");
+		print("<br>Script finished");
 
 		foreach($sortedArray as $key) {
 			$tranString = ("$sortedArray[$key] : $holdArray[$key] : $compArray[$key] \n");
