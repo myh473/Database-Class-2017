@@ -1,6 +1,16 @@
-SELECT * from film;
-SELECT * from category;
-SELECT * from film_category;
-
+SELECT last_name, first_name, email FROM customer ORDER BY last_name;
+SELECT last_name, first_name, email FROM customer WHERE active = 0 ORDER BY last_name;
+SELECT c.last_name, c.first_name, c.email, a.address, a.district, a.phone FROM customer c, address a WHERE c.address_id = a.address_id ORDER BY c.last_name;
+SELECT c.last_name, c.first_name, c.email, a.phone, a.address, a.district, ci.city, a.postal_code, co.country FROM customer c, address a, city ci, country co WHERE c.address_id = a.address_id AND c.active = 0 AND a.city_id = ci.city_id AND ci.country_id = co.country_id  ORDER BY c.last_name;
+INSERT INTO film (film_id, title, description, release_year, language_id, original_language_id, rental_duration, rental_rate, length, replacement_cost, rating, special_features) VALUE (1001, "1st Grade FBI Agent", "An undercover FBI agent must pretend to be
+a 1st grade teacher to catch the bad guy", 2014, 2, null, 5, 4.99, 123, 20.99,"PG-13","Trailers");
+SELECT title, description FROM film WHERE language_id != 1;
 SELECT f.title, f.rental_rate, l.name FROM film f, category c, film_category fc, language l WHERE f.film_id = fc.film_id AND fc.category_id = c.category_id AND c.name = "Sci-Fi" AND f.language_id = l.language_id;
+SELECT f.title, f.film_id from film f, film_category fc where  fc.category_id=1 and fc.film_id=f.film_id;
+SELECT f.title, I.inventory_id, f.film_id from film f, film_category fc, inventory I where I.film_id=f.film_id and fc.category_id=1 and fc.film_id=f.film_id;
+SELECT title, rental_duration FROM film WHERE replacement_cost >= 15 AND replacement_cost <= 23;
 SELECT f.title FROM film f, category c, film_category fc WHERE f.film_id = fc.film_id AND fc.category_id AND fc.category_id = c.category_id AND c.name = "Action" AND (f.rating = "PG-13" OR f.rating = "R" OR "NC-17");
+SELECT AVG(f.length) FROM film f, category c, film_category fc WHERE f.film_id = fc.film_id AND fc.category_id = c.category_id AND c.name = "Children";
+SELECT a.last_name, a.first_name, f.title FROM actor a, film f, film_category fc, category c, film_actor fa WHERE f.film_id = fc.film_id AND fc.category_id = c.category_id AND (c.name = "Family" OR c.name = "Foreign" OR c.name = "Horror") AND a.actor_id = fa.actor_id AND f.film_id = fa.film_id Order by a.last_name;
+SELECT a.last_name, a.first_name, c.name as category, f.title FROM actor a, film f, film_category fc, category c, film_actor fa WHERE f.film_id = fc.film_id AND fc.category_id = c.category_id AND (c.name = "Family" OR  c.name = "Horror") AND a.actor_id = fa.actor_id AND f.film_id = fa.film_id Order By a.last_name;
+SELECT c.last_name, c.email FROM customer c, actor a, film f, film_actor fa, rental r, inventory i WHERE r.customer_id = c.customer_id AND fa.film_id = f.film_id AND fa.actor_id = a.actor_id AND r.inventory_id = i.inventory_id AND i.film_id = f.film_id AND ((a.first_name = "NICK" AND a.last_name = "WAHLBERG") OR (a.first_name = "MATTHEW" AND a.last_name = "JOHANSSON") OR (a.first_name = "RITA" AND a.last_name = "REYNOLDS")) GROUP BY c.last_name;
