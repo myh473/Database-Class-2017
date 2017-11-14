@@ -1,0 +1,17 @@
+<html>
+
+<head>
+
+	<title> Manager Page </title>
+	<link rel ="stylesheet" type="text/css" href="sample.css">
+
+</head>
+
+<body>
+	<h1>Hey, Squanchy here! You ready to squanch some employees? </h1>
+	<img src = "Squanchy.png" alt = "image of Squanchy" width="350" height="500">
+		<h2> Squanch this button here to view current employees.</h2>
+		<form action = "analysis.php" method = "post" >
+		</p>
+</body>
+</html>
