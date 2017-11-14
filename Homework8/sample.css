@@ -1,0 +1,23 @@
+body 	{ background: #012E58 }
+
+h1 	{	font-family: Arial, Helvetica, Sans-serif; font-size:18pt;
+	 		color:white; font-weight:bold; }
+
+h2 	{	font-family: Arial, Helvetica, Sans-serif; font-size:12pt;
+	 		color:black; font-weight:bold; }
+
+p	{	font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
+	 	color:white; }
+
+p.alert	{ 	font-style: italic; color:white;}
+
+table	{ 	font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
+			 	color:white; }
+
+td.center{	text-align:center;}
+
+select	{ 	font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
+	 			font-weight: bold; color:blue; background: lightBlue}
+
+option	{ 	font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
+	 			color:black; background: silver}
