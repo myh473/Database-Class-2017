@@ -1,1 +1,45 @@
-and how
+<html>
+<head>
+	<title>New Employee Page</title>
+	<link rel ="stylesheet" type="text/css" href="sample.css">
+</head>
+
+<body>
+	<h1>ADD A NEW  RECORD</h1>
+
+	<form action = "insertEmployee.php" method = "post" >
+
+	<table border='0'>
+	<tr><td>First Name</td>
+		<td><input type = "text" size = "20" name = "empFirstName"></td></tr>
+	<tr><td>Last Name</td>
+		<td><input type = "text" size = "20" name = "empLastName"></td></tr>		
+	<tr><td>Email</td>
+		<td><input type = "text" size = "20" name = "empEmail"></td></tr>
+		<tr><td>Store ID</td>
+		<td class="dropdown">
+                 <form action="" name="FILTER">
+                     <select name="filter_for" >
+                         <option value="Store 1">Store 1</option>
+                         <option value="Store 2">Store 2</option>
+                     </select>
+                 </form>
+             </td>
+          </tr>
+	<tr><td>Address</td>
+		<td><input type = "text" size = "20" name = "empAddress"></td></tr>
+	<tr><td>City</td>
+		<td><input type = "text" size = "20" name = "empCity"></td></tr>
+	<tr><td>District</td>
+		<td><input type = "text" size = "20" name = "empDistrict"></td></tr>
+	<tr><td>Postal Code</td>
+		<td><input type = "text" size = "20" name = "empPostalCode"></td></tr>
+	<tr><td>Phone Number</td>
+		<td><input type = "text" size = "20" name = "empPhoneNumber"></td></tr>
+	</table>
+	<p><input type = "submit" value = "Submit New Employee Record"></p>
+
+	</form>
+
+</body>
+</html>
