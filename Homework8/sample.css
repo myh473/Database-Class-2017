@@ -1,23 +1,26 @@
-body 	{ background: #012E58 }
+body 	{ background: #778899; }
 
 h1 	{	font-family: Arial, Helvetica, Sans-serif; font-size:18pt;
-	 		color:white; font-weight:bold; }
+	 		color:#FFA07A; font-weight:bold; }
 
-h2 	{	font-family: Arial, Helvetica, Sans-serif; font-size:12pt;
-	 		color:black; font-weight:bold; }
+h2 	{	font-family: Arial, Helvetica, Sans-serif; font-size:14pt;
+	 		color:#FFA07A; font-weight:bold; }
+			
+h3 	{	font-family: Arial, Helvetica, Sans-serif; font-size:14pt;
+	 		color:#FFA07A; font-weight:bold; }
 
 p	{	font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
-	 	color:white; }
+	 	color:black; }
 
-p.alert	{ 	font-style: italic; color:white;}
+p.alert	{ 	font-style: italic; color:red;}
 
 table	{ 	font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
-			 	color:white; }
+			 	color:blue; }
 
 td.center{	text-align:center;}
 
 select	{ 	font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
-	 			font-weight: bold; color:blue; background: lightBlue}
+	 			font-weight: bold; color:black; background: pink}
 
 option	{ 	font-family: Arial, Helvetica, Sans-serif; font-size:10pt;
 	 			color:black; background: silver}
