@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Insert Employee</title>
-	<link rel ="stylesheet" type ="text/css" herf="sample.css">
+	<link rel ="stylesheet" type="text/css" href="sample.css">
 
 </head>
 
@@ -75,7 +75,6 @@
 
 
 
-	?>
 	?>
 
 
