@@ -33,15 +33,15 @@
 			<th>Phone Number</th>
 		</tr>");
 		while($row = mysqli_fetch_assoc($result)) {
-			$a = $row["last_name"];
-			$b = $row["first_name"];
-			$c = $row["address"];
-			$d = $row["city"];
-			$e = $row["district"];
-			$f = $row["country"];
-			$g = $row["postal_code"];
-			$h = $row["email"];
-			$i = $row["phone"];
+			$a = $row[$_POST['empLastName']];
+			$b = $row[$_POST['empFirstName']];
+			$c = $row[$_POST['empEmail']];
+			$d = $row[$_POST['empStoreID']];
+			$e = $row[$_POST['empAddress']];
+			$e = $row[$_POST['empCity']];
+			$f = $row[$_POST['empDistrict']];
+			$g = $row[$_POST['empPostalCode']];
+			$h = $row[$_POST['empPhoneNumber']];
 			print("<tr> <td>$a</td>
 				<td class = \"center\">$b</td>
 				<td class = \"center\">$c</td>
