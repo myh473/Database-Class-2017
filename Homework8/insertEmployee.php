@@ -18,22 +18,9 @@
 		die("Connection failed" . $conn->connect_error);
 	}
 	echo "Connected successfully<br>";
-	$sql = "SELECT s.last_name, s.first_name, a.address, c.city, a.district, co.country, a.postal_code, s.email, a.phone FROM staff s, address a, city c, country co WHERE s.address_id = a.address_id AND a.city_id = c.city_id AND c.country_id = co.country_id;";
-	$result = $conn->query($sql);
-	if (mysqli_num_rows($result) > 0) {
-		print("<table border = \"2\"> <tr>
-			<th>Last Name</th>
-			<th>First Name</th>
-			<th>Address</th>
-			<th>City</th>
-			<th>District</th>
-			<th>Country</th>
-			<th>Postal Code</th>
-			<th>Email Address</th>
-			<th>Phone Number</th>
-		</tr>");
-		while($row = mysqli_fetch_assoc($result)) {
-			$a = $row[$_POST['empLastName']];
+	
+	
+	$a = $row[$_POST['empLastName']];
 			$b = $row[$_POST['empFirstName']];
 			$c = $row[$_POST['empEmail']];
 			$d = $row[$_POST['empStoreID']];
@@ -42,6 +29,15 @@
 			$f = $row[$_POST['empDistrict']];
 			$g = $row[$_POST['empPostalCode']];
 			$h = $row[$_POST['empPhoneNumber']];
+	
+	$sql =" INSERT INTO address (address, address2,district,city_id,postal_code,phone,last_update) VALUE ("51 Top Ramen dr", null, "Gonzo", "580", "35555", "4236023950", "right now");";
+	$sql2 =" select max(a.address_id), a.address_id FROM address a;";
+	$sql3 ="INSERT INTO staff (staff_id, first_name, last_name, address_id, picture, email, store_id, active, username, password, last_update) VALUE (3, "Tom", "Squanch", 580, "tom.S@yourmoms.com", 1,1,"Tom","password", "this moment");"";
+	
+	
+	$result = $conn->query($sql);
+	
+			
 			print("<tr> <td>$a</td>
 				<td class = \"center\">$b</td>
 				<td class = \"center\">$c</td>
@@ -52,7 +48,7 @@
 				<td class = \"center\">$h</td>
 				<td class = \"center\">$i</td>
 				</tr>");
-		}
+		
 		print("</table>");
 	}
 	else {
