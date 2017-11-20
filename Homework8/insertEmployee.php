@@ -20,24 +20,52 @@
 	echo "Connected successfully<br>";
 	
 	
-	$a = $row[$_POST['empLastName']];
-			$b = $row[$_POST['empFirstName']];
-			$c = $row[$_POST['empEmail']];
-			$d = $row[$_POST['empStoreID']];
-			$e = $row[$_POST['empAddress']];
-			$e = $row[$_POST['empCity']];
-			$f = $row[$_POST['empDistrict']];
-			$g = $row[$_POST['empPostalCode']];
-			$h = $row[$_POST['empPhoneNumber']];
+	 		$a = implode([$_POST['empLastName']]);
+			$b = implode([$_POST['empFirstName']]);
+			$c = implode([$_POST['empEmail']]);
+			$d = implode([$_POST['empStoreID']]);
+			$e = implode([$_POST['empAddress']]);
+			$f = implode([$_POST['empCity']]);
+			$g = implode([$_POST['empDistrict']]);
+			$h = implode([$_POST['empPostalCode']]);
+			$i = implode([$_POST['empPhoneNumber']]);
 	
-	$sql =" INSERT INTO address (address, address2,district,city_id,postal_code,phone,last_update) VALUE ("51 Top Ramen dr", null, "Gonzo", "580", "35555", "4236023950", "right now");";
-	$sql2 =" select max(a.address_id), a.address_id FROM address a;";
-	$sql3 ="INSERT INTO staff (staff_id, first_name, last_name, address_id, picture, email, store_id, active, username, password, last_update) VALUE (3, "Tom", "Squanch", 580, "tom.S@yourmoms.com", 1,1,"Tom","password", "this moment");"";
+	$sql =" INSERT INTO address (address, address2,district,city_id,postal_code,phone,last_update) VALUE ('52 Top Ramen dr', null, 'Gonzo', '580', '35555', '4236023950', 'right now');";
+	$sql2 =" SELECT max(address_id) FROM address;";
 	
 	
-	$result = $conn->query($sql);
 	
+	if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+	} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+	$result = $conn->query($sql2);
+
+	while($row = mysqli_fetch_assoc($result)) {
+		//	$aID = $row["address_id"];
+		}
+
+			$sql3 ="INSERT INTO staff (first_name, last_name, address_id, email, store_id) VALUE ($b, $a, 500, $c, 1;";
+	
+	if ($conn->query($sql3) === TRUE) {
+    echo "New record created successfully";
+	} else {
+    echo "Error: " . $sql3 . "<br>" . $conn->error;
+	}
 			
+			print("<table border = \"2\"> <tr>
+			<th>Last Name</th>
+			<th>First Name</th>
+			<th>Email Address</th>
+			<th>Store ID</th>
+			<th>Address</th>
+			<th>City ID</th>
+			<th>District</th>
+			<th>Postal Code</th>
+			<th>Phone Number</th>
+			</tr>");
+
 			print("<tr> <td>$a</td>
 				<td class = \"center\">$b</td>
 				<td class = \"center\">$c</td>
@@ -50,10 +78,9 @@
 				</tr>");
 		
 		print("</table>");
-	}
-	else {
+	/*else {
 		echo "No results";
-	}
+	}*/
 	?>
 
 
